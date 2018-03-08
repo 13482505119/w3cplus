@@ -64,6 +64,8 @@ module.exports = function(grunt) {
                 files: [
                     {
                         '<%= config.dist %>/js/w3cplus.min.js': [
+                            '<%= config.dist %>/../bower_components/jquery/dist/jquery.min.js',
+                            '<%= config.dist %>/../bower_components/swiper/dist/js/swiper.min.js',
                             '<%= config.dist %>/js/w3cplus.js'
                         ]
                     }
@@ -106,6 +108,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '<%= config.dist %>/css/w3cplus.min.css': [
+                        '<%= config.dist %>/../bower_components/normalize.css/normalize.css',
+                        '<%= config.dist %>/../bower_components/swiper/dist/css/swiper.min.css',
                         '<%= config.dist %>/css/w3cplus.css'
                     ]
                 }
@@ -226,9 +230,11 @@ module.exports = function(grunt) {
         'sass:dist',
         //'jshint',
         'copy:dist',
+        'useminPrepare',
+        'usemin',
         'includereplace:dist',
         'autoprefixer:dist',
-        'cssmin',
+        'cssmin:dist',
         'uglify'
     ]);
 
