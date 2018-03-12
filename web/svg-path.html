@@ -1,4 +1,4 @@
-@@include('header.html', {"title": "首页"})
+@@include('header.html', {"title": "路径"})
 <div id="container">
     <svg width="357px" height="552px" viewbox="0 0 357 552">
         <polyline id="Path" stroke="#979797" fill="none" stroke-width="3" points="2.12890625 2.1640625 265.90625 139.902344 323.003906 37.9804688"></polyline>
@@ -7,6 +7,49 @@
         <path fill="none" d="M2.12890625,232.164062 C75.0507812,323.229167 162.976562,369.141927 265.90625,369.902344 C360.395833,338.97526 379.428385,305.001302 323.003906,267.980469" id="Path" stroke="#417505" stroke-width="3"></path>
         <path fill="none" d="M2.12890625,142.164062 C106.782552,268.945312 193.595052,309.457031 262.566406,263.699219 C331.53776,217.941406 351.683594,189.36849 323.003906,177.980469" id="Path" stroke="#BD10E0" stroke-width="3"></path>
         <path fill="none" d="M2.12890625,82.1640625 L240.945204,206.868276 C254.848001,214.127988 272.003365,209.018721 279.66886,195.335469 L323.003906,117.980469" id="Path" stroke="#D31E1E" stroke-width="3"></path>
+    </svg>
+    <p></p>
+    <svg width="400px" height="300px" viewbox="0 0 400 300">
+        <path d="M0 0 H50" stroke="black"></path>
+        <path d="M0 50 V100" stroke="black"></path>
+        <path d="M0 100 L50 150" stroke="black"></path>
+        <path d="M0 150 C40 190,60 190,100,150 S150 110, 200 150" stroke="black" fill="none"></path>
+        <path d="M0 200 Q50 250, 100 200 T200 200 Z" stroke="black" fill="none"></path>
+    </svg>
+    <p></p>
+    <svg width="400px" height="300px" viewbox="0 0 400 300" style="margin-left: 300px; overflow: visible;">
+        <path d="M0 0 A100 20,0 0 0 50 100" stroke="#000" fill="none"></path>
+    </svg>
+    <svg width="400px" height="300px" viewbox="0 0 400 300" style="margin-left: 300px; overflow: visible;">
+        <path d="M0 0 A100 20,0 0 1 50 100" stroke="#000" fill="none"></path>
+    </svg>
+    <svg width="400px" height="300px" viewbox="0 0 400 300" style="margin-left: 300px; overflow: visible;">
+        <path d="M0 0 A100 20,0 1 1 50 100" stroke="#000" fill="none"></path>
+    </svg>
+    <svg width="400px" height="300px" viewbox="0 0 400 300">
+        <!-- 大角度 ( 黑色线 ) -->
+        <path d="M0 0 L50 50 A50 30,0 1 0 100 0" stroke="#000" fill="none"></path>
+        <!-- 小角度 ( 红色线 ) -->
+        <path d="M0 0 L50 50 A50 30,0 0 0 100 0" stroke="#f00" fill="none"></path>
+    </svg>
+    <svg width="400px" height="300px" viewbox="0 0 400 300">
+        <!-- 夹角 0 度 ( 黑色线 ) -->
+        <path d="M0 0 A50 100,0 0 0 100 0" stroke="#000" fill="none"></path>
+        <!-- 夹角 30 度 ( 红色线 ) -->
+        <path d="M0 0 A50 100,30 0 0 100 0" stroke="#f00" fill="none"></path>
+        <!-- 夹角 60 度 ( 橘色线 ) -->
+        <path d="M0 0 A50 100,60 0 0 100 0" stroke="#f90" fill="none"></path>
+    </svg>
+    <svg width="600" height="400">
+        <path d="M50,50 v300 h200 v-300 Z" fill="none" stroke="#000" stroke-width="2px" ></path>
+    </svg>
+    <svg width="100px" height="100px">
+        <path d="M10 10 H 90 V 90 H 10 L 10 10"></path>
+        <!-- Points -->
+        <circle cx="10" cy="10" r="2" fill="red"></circle>
+        <circle cx="90" cy="90" r="2" fill="red"></circle>
+        <circle cx="90" cy="10" r="2" fill="red"></circle>
+        <circle cx="10" cy="90" r="2" fill="red"></circle>
     </svg>
 </div>
 @@include('footer.html')
