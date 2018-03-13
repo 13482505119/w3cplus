@@ -1,49 +1,61 @@
 @@include('header.html', {"title": "SVG的图层和渲染顺序"})
 <div id="container">
-    <svg width="275px" height="275px" viewBox="0 0 275 275">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <rect fill="#4A90E2" x="11" y="100" width="204" height="175"></rect>
-            <polygon fill="#BD10E0" points="0 0 230.109375 35.8164062 89.5898438 221.050781"></polygon>
-            <ellipse fill="#F02929" cx="179.5" cy="147.5" rx="95.5" ry="96.5"></ellipse>
-        </g>
-    </svg>
-    <svg width="364px" height="438px" viewbox="0 0 364 438">
-        <g class="Group" transform="translate(23.000000, 0.000000)">
-            <rect class="rect" fill="#4A90E2" x="11" y="100" width="204" height="175"></rect>
-            <polygon class="triangle" fill="#BD10E0" points="0 0 230.109375 35.8164062 89.5898438 221.050781"></polygon>
-            <ellipse class="circle" fill="#F02929" cx="245.5" cy="147.5" rx="95.5" ry="96.5"></ellipse>
-        </g>
-        <g class="Group-2" transform="translate(6.000000, 180.000000)" fill="#D0144B" stroke="#2BC14C" stroke-width="9">
-            <polygon class="Star" points="105 146.25 43.2825485 176.379157 55.0695329 112.564578 5.13906579 67.370843 74.1412743 58.0604215 105 0 135.858726 58.0604215 204.860934 67.370843 154.930467 112.564578 166.717451 176.379157"></polygon>
-            <polygon class="Star" points="237.580639 131.5 220.534867 139.843459 223.790319 122.171729 210 109.656541 229.057753 107.078271 237.580639 91 246.103525 107.078271 265.161278 109.656541 251.370958 122.171729 254.626411 139.843459"></polygon>
-            <polygon class="Star" points="221.580639 210.5 204.534867 218.843459 207.790319 201.171729 194 188.656541 213.057753 186.078271 221.580639 170 230.103525 186.078271 249.161278 188.656541 235.370958 201.171729 238.626411 218.843459"></polygon>
-            <polygon class="Star" points="126.580639 241.5 109.534867 249.843459 112.790319 232.171729 99 219.656541 118.057753 217.078271 126.580639 201 135.103525 217.078271 154.161278 219.656541 140.370958 232.171729 143.626411 249.843459"></polygon>
-        </g>
-    </svg>
-    <svg width="364px" height="338px" viewbox="0 0 364 338">
-        <g class="group" style="z-index:1;">
-            <rect class="rect" fill="#4A90E2" x="11" y="100" width="204" height="175"></rect>
-            <polygon class="triangle" fill="#BD10E0" points="0 0 230.109375 35.8164062 89.5898438 221.050781"></polygon>
-            <ellipse class="circle" fill="#F02929" cx="245.5" cy="147.5" rx="95.5" ry="96.5"></ellipse>
-        </g>
-        <g class="group" fill="#D0144B" stroke="#2BC14C" stroke-width="9" style="z-index:0;">
-            <polygon class="Star" points="105 146.25 43.2825485 176.379157 55.0695329 112.564578 5.13906579 67.370843 74.1412743 58.0604215 105 0 135.858726 58.0604215 204.860934 67.370843 154.930467 112.564578 166.717451 176.379157"></polygon>
-            <polygon class="Star" points="237.580639 131.5 220.534867 139.843459 223.790319 122.171729 210 109.656541 229.057753 107.078271 237.580639 91 246.103525 107.078271 265.161278 109.656541 251.370958 122.171729 254.626411 139.843459"></polygon>
-            <polygon class="Star" points="221.580639 210.5 204.534867 218.843459 207.790319 201.171729 194 188.656541 213.057753 186.078271 221.580639 170 230.103525 186.078271 249.161278 188.656541 235.370958 201.171729 238.626411 218.843459"></polygon>
-            <polygon class="Star" points="126.580639 241.5 109.534867 249.843459 112.790319 232.171729 99 219.656541 118.057753 217.078271 126.580639 201 135.103525 217.078271 154.161278 219.656541 140.370958 232.171729 143.626411 249.843459"></polygon>
-        </g>
-    </svg>
+    <h1 class="text-center">SVG的图层和渲染顺序</h1>
+    <ol>
+        <li>
+            <h2>SVG的图层</h2>
+            <svg width="275px" height="275px" viewBox="0 0 275 275">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect fill="#4A90E2" x="11" y="100" width="204" height="175"></rect>
+                    <polygon fill="#BD10E0" points="0 0 230.109375 35.8164062 89.5898438 221.050781"></polygon>
+                    <ellipse fill="#F02929" cx="179.5" cy="147.5" rx="95.5" ry="96.5"></ellipse>
+                </g>
+            </svg>
+            <p></p>
+            <svg width="364px" height="438px" viewbox="0 0 364 438">
+                <g class="Group" transform="translate(23.000000, 0.000000)">
+                    <rect class="rect" fill="#4A90E2" x="11" y="100" width="204" height="175"></rect>
+                    <polygon class="triangle" fill="#BD10E0" points="0 0 230.109375 35.8164062 89.5898438 221.050781"></polygon>
+                    <ellipse class="circle" fill="#F02929" cx="245.5" cy="147.5" rx="95.5" ry="96.5"></ellipse>
+                </g>
+                <g class="Group-2" transform="translate(6.000000, 180.000000)" fill="#D0144B" stroke="#2BC14C" stroke-width="9">
+                    <polygon class="Star" points="105 146.25 43.2825485 176.379157 55.0695329 112.564578 5.13906579 67.370843 74.1412743 58.0604215 105 0 135.858726 58.0604215 204.860934 67.370843 154.930467 112.564578 166.717451 176.379157"></polygon>
+                    <polygon class="Star" points="237.580639 131.5 220.534867 139.843459 223.790319 122.171729 210 109.656541 229.057753 107.078271 237.580639 91 246.103525 107.078271 265.161278 109.656541 251.370958 122.171729 254.626411 139.843459"></polygon>
+                    <polygon class="Star" points="221.580639 210.5 204.534867 218.843459 207.790319 201.171729 194 188.656541 213.057753 186.078271 221.580639 170 230.103525 186.078271 249.161278 188.656541 235.370958 201.171729 238.626411 218.843459"></polygon>
+                    <polygon class="Star" points="126.580639 241.5 109.534867 249.843459 112.790319 232.171729 99 219.656541 118.057753 217.078271 126.580639 201 135.103525 217.078271 154.161278 219.656541 140.370958 232.171729 143.626411 249.843459"></polygon>
+                </g>
+            </svg>
+        </li>
+        <li>
+            <h2>SVG渲染顺序</h2>
+            <p><img src="images/svg-layer-8.png"></p>
+            <svg width="364px" height="338px" viewbox="0 0 364 338" id="svg">
+                <g class="group" style="z-index:1;">
+                    <rect class="rect" fill="#4A90E2" x="11" y="100" width="204" height="175"></rect>
+                    <polygon class="triangle" fill="#BD10E0" points="0 0 230.109375 35.8164062 89.5898438 221.050781"></polygon>
+                    <ellipse class="circle" fill="#F02929" cx="245.5" cy="147.5" rx="95.5" ry="96.5"></ellipse>
+                </g>
+                <g class="group" fill="#D0144B" stroke="#2BC14C" stroke-width="9" style="z-index:0;">
+                    <polygon class="Star" points="105 146.25 43.2825485 176.379157 55.0695329 112.564578 5.13906579 67.370843 74.1412743 58.0604215 105 0 135.858726 58.0604215 204.860934 67.370843 154.930467 112.564578 166.717451 176.379157"></polygon>
+                    <polygon class="Star" points="237.580639 131.5 220.534867 139.843459 223.790319 122.171729 210 109.656541 229.057753 107.078271 237.580639 91 246.103525 107.078271 265.161278 109.656541 251.370958 122.171729 254.626411 139.843459"></polygon>
+                    <polygon class="Star" points="221.580639 210.5 204.534867 218.843459 207.790319 201.171729 194 188.656541 213.057753 186.078271 221.580639 170 230.103525 186.078271 249.161278 188.656541 235.370958 201.171729 238.626411 218.843459"></polygon>
+                    <polygon class="Star" points="126.580639 241.5 109.534867 249.843459 112.790319 232.171729 99 219.656541 118.057753 217.078271 126.580639 201 135.103525 217.078271 154.161278 219.656541 140.370958 232.171729 143.626411 249.843459"></polygon>
+                </g>
+            </svg>
+            <script>
+                var svg = document.querySelector('#svg');
+                var groups = document.querySelectorAll('.group');
+                for (var key in groups) {
+                    if (groups.hasOwnProperty(key)) {
+                        var element = groups[key];
+                        element.addEventListener('mouseenter', function(e) {
+                            svg.appendChild(e.target);
+                        }, false);
+                    }
+                }
+            </script>
+        </li>
+    </ol>
 </div>
-<script>
-    var svg = document.querySelector('svg');
-    var groups = document.querySelectorAll('.group');
-    for (var key in groups) {
-        if (groups.hasOwnProperty(key)) {
-            var element = groups[key];
-            element.addEventListener('mouseenter', function(e) {
-                svg.appendChild(e.target);
-            }, false);
-        }
-    }
-</script>
+
 @@include('footer.html')

@@ -1,55 +1,196 @@
 @@include('header.html', {"title": "路径"})
 <div id="container">
-    <svg width="357px" height="552px" viewbox="0 0 357 552">
-        <polyline id="Path" stroke="#979797" fill="none" stroke-width="3" points="2.12890625 2.1640625 265.90625 139.902344 323.003906 37.9804688"></polyline>
-        <polygon id="Path" fill="none" stroke="#BD10E0" stroke-width="3" points="2.12890625 412.164062 265.90625 549.902344 323.003906 447.980469 250.5625 487.46875"></polygon>
-        <path fill="none" d="M2.12890625,324.164062 C246.200156,411.01209 334.125937,456.924851 265.90625,461.902344 C198.734375,466.803385 217.766927,432.829427 323.003906,359.980469" id="Path" stroke="#50E3C2" stroke-width="3"></path>
-        <path fill="none" d="M2.12890625,232.164062 C75.0507812,323.229167 162.976562,369.141927 265.90625,369.902344 C360.395833,338.97526 379.428385,305.001302 323.003906,267.980469" id="Path" stroke="#417505" stroke-width="3"></path>
-        <path fill="none" d="M2.12890625,142.164062 C106.782552,268.945312 193.595052,309.457031 262.566406,263.699219 C331.53776,217.941406 351.683594,189.36849 323.003906,177.980469" id="Path" stroke="#BD10E0" stroke-width="3"></path>
-        <path fill="none" d="M2.12890625,82.1640625 L240.945204,206.868276 C254.848001,214.127988 272.003365,209.018721 279.66886,195.335469 L323.003906,117.980469" id="Path" stroke="#D31E1E" stroke-width="3"></path>
-    </svg>
-    <p></p>
-    <svg width="400px" height="300px" viewbox="0 0 400 300">
-        <path d="M0 0 H50" stroke="black"></path>
-        <path d="M0 50 V100" stroke="black"></path>
-        <path d="M0 100 L50 150" stroke="black"></path>
-        <path d="M0 150 C40 190,60 190,100,150 S150 110, 200 150" stroke="black" fill="none"></path>
-        <path d="M0 200 Q50 250, 100 200 T200 200 Z" stroke="black" fill="none"></path>
-    </svg>
-    <p></p>
-    <svg width="400px" height="300px" viewbox="0 0 400 300" style="margin-left: 300px; overflow: visible;">
-        <path d="M0 0 A100 20,0 0 0 50 100" stroke="#000" fill="none"></path>
-    </svg>
-    <svg width="400px" height="300px" viewbox="0 0 400 300" style="margin-left: 300px; overflow: visible;">
-        <path d="M0 0 A100 20,0 0 1 50 100" stroke="#000" fill="none"></path>
-    </svg>
-    <svg width="400px" height="300px" viewbox="0 0 400 300" style="margin-left: 300px; overflow: visible;">
-        <path d="M0 0 A100 20,0 1 1 50 100" stroke="#000" fill="none"></path>
-    </svg>
-    <svg width="400px" height="300px" viewbox="0 0 400 300">
-        <!-- 大角度 ( 黑色线 ) -->
-        <path d="M0 0 L50 50 A50 30,0 1 0 100 0" stroke="#000" fill="none"></path>
-        <!-- 小角度 ( 红色线 ) -->
-        <path d="M0 0 L50 50 A50 30,0 0 0 100 0" stroke="#f00" fill="none"></path>
-    </svg>
-    <svg width="400px" height="300px" viewbox="0 0 400 300">
-        <!-- 夹角 0 度 ( 黑色线 ) -->
-        <path d="M0 0 A50 100,0 0 0 100 0" stroke="#000" fill="none"></path>
-        <!-- 夹角 30 度 ( 红色线 ) -->
-        <path d="M0 0 A50 100,30 0 0 100 0" stroke="#f00" fill="none"></path>
-        <!-- 夹角 60 度 ( 橘色线 ) -->
-        <path d="M0 0 A50 100,60 0 0 100 0" stroke="#f90" fill="none"></path>
-    </svg>
-    <svg width="600" height="400">
-        <path d="M50,50 v300 h200 v-300 Z" fill="none" stroke="#000" stroke-width="2px" ></path>
-    </svg>
-    <svg width="100px" height="100px">
-        <path d="M10 10 H 90 V 90 H 10 L 10 10"></path>
-        <!-- Points -->
-        <circle cx="10" cy="10" r="2" fill="red"></circle>
-        <circle cx="90" cy="90" r="2" fill="red"></circle>
-        <circle cx="90" cy="10" r="2" fill="red"></circle>
-        <circle cx="10" cy="90" r="2" fill="red"></circle>
-    </svg>
+    <h1 class="text-center">路径</h1>
+    <ol>
+        <li>
+            <h2>Path相关指令</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>指令</th>
+                    <th>参数</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>M</code></td>
+                    <td><code>x y</code></td>
+                    <td>起始点坐标<code>x y</code> （Move to）</td>
+                </tr>
+                <tr>
+                    <td><code>L</code></td>
+                    <td><code>x y</code></td>
+                    <td>从当前点的坐标画直线到指定点的 <code>x y</code>坐标 （Line to）</td>
+                </tr>
+                <tr>
+                    <td><code>H</code></td>
+                    <td><code>x</code></td>
+                    <td>从当前点的坐标画水平直线到指定的<code>x</code>轴坐标 （Horizontal line to）</td>
+                </tr>
+                <tr>
+                    <td><code>V</code></td>
+                    <td><code>y</code></td>
+                    <td>从当前点的座标画垂直直线到指定的<code>y</code>轴坐标 （Vertical line to）</td>
+                </tr>
+                <tr>
+                    <td><code>C</code></td>
+                    <td><code>x1 y1 x2 y2 x y</code></td>
+                    <td>从当前点的坐标画条贝塞风线到指定点的<code>x, y</code>坐标，其中 <code>x1 y1</code>及<code>x2, y2</code>为控制点 （Curve）</td>
+                </tr>
+                <tr>
+                    <td><code>S</code></td>
+                    <td><code>x2 y2 x y</code></td>
+                    <td>从当前点的坐标画条反射的贝塞曲线到指定点的<code>x, y</code>坐标，其中<code>x2, y2</code>为反射的控制点（Smooth curve）</td>
+                </tr>
+                <tr>
+                    <td><code>Q</code></td>
+                    <td><code>x1 y1 x y</code></td>
+                    <td>从当前点的坐标画条反射二次贝塞曲线到指定点的<code>x, y</code>坐标，其中<code>x1 y1</code>为控制点（Quadratic Bézier curve）</td>
+                </tr>
+                <tr>
+                    <td><code>T</code></td>
+                    <td><code>x y</code></td>
+                    <td>从当前点的坐标画条反射二次贝塞曲线到指定点的<code>x, y</code>坐标，以前一个坐标为反射控制点（Smooth Quadratic Bézier curve）</td>
+                </tr>
+                <tr>
+                    <td><code>A</code></td>
+                    <td><code>rx ry x-axis-rotation large-arc-flag sweep-flag x y</code></td>
+                    <td>从当前点的坐标画个椭圆形到指定点的<code>x, y</code>坐标，其中<code>rx, ry</code>为椭圆形的<code>x</code>轴及<code>y</code>轴的半径，<code>x-axis-rotation</code>是弧线与<code>x</code>轴的旋转角度，<code>large-arc-flag</code>则设定<code>1</code>最大角度的弧线或是<code>0</code>最小角度的弧线，<code>sweep-flag</code>设定方向为<code>1</code>顺时针方向或<code>0</code>逆时针方向（Arc）</td>
+                </tr>
+                <tr>
+                    <td><code>Z</code></td>
+                    <td>&nbsp;</td>
+                    <td>关闭路径，将当前点坐标与第一个点的坐标连接起来（Closepath）</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            <h2>制作图软件中的path</h2>
+            <svg width="357px" height="552px" viewbox="0 0 357 552">
+                <polyline id="Path" stroke="#979797" fill="none" stroke-width="3" points="2.12890625 2.1640625 265.90625 139.902344 323.003906 37.9804688"></polyline>
+                <polygon id="Path" fill="none" stroke="#BD10E0" stroke-width="3" points="2.12890625 412.164062 265.90625 549.902344 323.003906 447.980469 250.5625 487.46875"></polygon>
+                <path fill="none" d="M2.12890625,324.164062 C246.200156,411.01209 334.125937,456.924851 265.90625,461.902344 C198.734375,466.803385 217.766927,432.829427 323.003906,359.980469" id="Path" stroke="#50E3C2" stroke-width="3"></path>
+                <path fill="none" d="M2.12890625,232.164062 C75.0507812,323.229167 162.976562,369.141927 265.90625,369.902344 C360.395833,338.97526 379.428385,305.001302 323.003906,267.980469" id="Path" stroke="#417505" stroke-width="3"></path>
+                <path fill="none" d="M2.12890625,142.164062 C106.782552,268.945312 193.595052,309.457031 262.566406,263.699219 C331.53776,217.941406 351.683594,189.36849 323.003906,177.980469" id="Path" stroke="#BD10E0" stroke-width="3"></path>
+                <path fill="none" d="M2.12890625,82.1640625 L240.945204,206.868276 C254.848001,214.127988 272.003365,209.018721 279.66886,195.335469 L323.003906,117.980469" id="Path" stroke="#D31E1E" stroke-width="3"></path>
+            </svg>
+        </li>
+        <li>
+            <h2>SVG path基本指令</h2>
+            <ul>
+                <li>
+                    <h3>M/m</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50">
+                        <path d="M0 0" stroke="black"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>H/h</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50">
+                        <path d="M0 0 H50" stroke="black"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>V/v</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50">
+                        <path d="M0 0 V50" stroke="black"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>L/l</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50">
+                        <path d="M0 0 L50 50" stroke="black"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>C/c</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50">
+                        <path d="M0 0 C40 40,60 40,100,0" stroke="black" fill="none"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>S/s</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50" style="overflow: visible">
+                        <path d="M0 0 C40 40,60 40,100,0 S150 -40, 200, 0" stroke="black" fill="none"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>Q/q</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50" style="overflow: visible">
+                        <path d="M0 0 Q50 50,100, 0" stroke="black" fill="none"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>T/t</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50" style="overflow: visible">
+                        <path d="M0 0 Q50 50,100, 0 T200 0" stroke="black" fill="none"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>Z/z</h3>
+                    <svg width="400px" height="50px" viewbox="0 0 400 50" style="overflow: visible">
+                        <path d="M0 0 Q50 50,100, 0 T200 0 Z" stroke="black" fill="none"></path>
+                    </svg>
+                </li>
+                <li>
+                    <h3>A/a</h3>
+                    <svg width="400px" height="100px" viewbox="0 0 400 100" style="margin-left: 300px; overflow: visible;">
+                        <path d="M0 0 A100 20,0 0 0 50 100" stroke="#000" fill="none"></path>
+                    </svg>
+                    <svg width="400px" height="100px" viewbox="0 0 400 100" style="margin-left: 300px; overflow: visible;">
+                        <path d="M0 0 A100 20,0 0 1 50 100" stroke="#000" fill="none"></path>
+                    </svg>
+                    <svg width="400px" height="100px" viewbox="0 0 400 100" style="margin-left: 300px; overflow: visible;">
+                        <path d="M0 0 A100 20,0 1 1 50 100" stroke="#000" fill="none"></path>
+                    </svg>
+                    <svg width="400px" height="100px" viewbox="0 0 400 100">
+                        <!-- 大角度 ( 黑色线 ) -->
+                        <path d="M0 0 L50 50 A50 30,0 1 0 100 0" stroke="#000" fill="none"></path>
+                        <!-- 小角度 ( 红色线 ) -->
+                        <path d="M0 0 L50 50 A50 30,0 0 0 100 0" stroke="#f00" fill="none"></path>
+                    </svg>
+                    <svg width="400px" height="100px" viewbox="0 0 400 100">
+                        <!-- 夹角 0 度 ( 黑色线 ) -->
+                        <path d="M0 0 A50 100,0 0 0 100 0" stroke="#000" fill="none"></path>
+                        <!-- 夹角 30 度 ( 红色线 ) -->
+                        <path d="M0 0 A50 100,30 0 0 100 0" stroke="#f00" fill="none"></path>
+                        <!-- 夹角 60 度 ( 橘色线 ) -->
+                        <path d="M0 0 A50 100,60 0 0 100 0" stroke="#f90" fill="none"></path>
+                    </svg>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2>相对坐标指令</h2>
+        </li>
+        <li>
+            <h2>样式，空格和逗号</h2>
+            <svg width="600" height="400">
+                <path d="M50,50 v300 h200 v-300 Z" fill="none" stroke="#000" stroke-width="2px" ></path>
+            </svg>
+        </li>
+        <li>
+            <h2>直线命令和曲线命令</h2>
+            <ul>
+                <li>
+                    <h3>直线命令</h3>
+                    <svg width="100px" height="100px">
+                        <path d="M10 10 H 90 V 90 H 10 L 10 10"></path>
+                        <!-- Points -->
+                        <circle cx="10" cy="10" r="2" fill="red"></circle>
+                        <circle cx="90" cy="90" r="2" fill="red"></circle>
+                        <circle cx="90" cy="10" r="2" fill="red"></circle>
+                        <circle cx="10" cy="90" r="2" fill="red"></circle>
+                    </svg>
+                </li>
+                <li>
+                    <h3>曲线命令</h3>
+                    <p>C/c S/s Q/q T/t</p>
+                </li>
+            </ul>
+        </li>
+    </ol>
 </div>
 @@include('footer.html')

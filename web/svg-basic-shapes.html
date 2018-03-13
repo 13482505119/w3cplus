@@ -1,56 +1,85 @@
 @@include('header.html', {"title": "基本形状"})
-<svg width="441px" height="542px" viewbox="0 0 441 542">
-    <defs>
-        <rect id="path-1" x="24" y="102" width="223" height="61"></rect>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M24.5,5.5 L242.5,5.5" id="Line" stroke="#979797" stroke-width="7" stroke-linecap="square"></path>
-        <path d="M35.5,55.5 L231.5,55.5" id="Line-2" stroke="#F43F3F" stroke-width="8" stroke-linecap="square"></path>
-        <path id="Line-2-decoration-1" d="M231.5,55.5 L220.7,52.5 L220.7,58.5 L231.5,55.5 Z" stroke="#F43F3F" stroke-width="8" stroke-linecap="square"></path>
-        <g id="Rectangle">
-            <use fill="#50E3C2" fill-rule="evenodd" xlink:href="#path-1"></use>
-            <rect stroke="#2B0B5D" stroke-width="2" x="25" y="103" width="221" height="59"></rect>
-        </g>
-        <ellipse id="Oval" fill="#E54C4C" cx="104" cy="230" rx="55" ry="25"></ellipse>
-        <circle id="Oval-2" stroke="#1D36C6" stroke-width="6" fill="#BD10E0" cx="233.5" cy="229.5" r="41.5"></circle>
-        <rect id="Rectangle-2" stroke="#979797" stroke-width="3" x="285.5" y="103.5" width="154" height="54" rx="8"></rect>
-        <polygon id="Star" stroke="#979797" fill="#D8D8D8" points="54.5 359 36.5725498 369.506578 39.9963881 347.253289 25.4927763 331.493422 45.5362749 328.246711 54.5 308 63.4637251 328.246711 83.5072237 331.493422 69.0036119 347.253289 72.4274502 369.506578"></polygon>
-        <polygon id="Polygon" stroke="#979797" fill="#D8D8D8" points="166.5 319 197.409337 341.456948 185.603021 377.793052 147.396979 377.793052 135.590663 341.456948"></polygon>
-        <polygon id="Triangle" stroke="#979797" fill="#D8D8D8" points="281.5 319 310 372 253 372"></polygon>
-        <path d="M7.36328125,456.507812 C21.8267071,446.910815 66.5037904,440.629565 141.394531,437.664062 L302.960938,475.503906 L282.238281,515.175781 L209.734375,538.65625 L222.191406,488.160156 L141.394531,498.050781 L72.9101563,527.65625 L65.2929688,488.160156 C12.2097513,476.655591 -7.10014455,466.10481 7.36328125,456.507812 Z" id="Path-2" stroke="#A13A3A" stroke-width="4"></path>
-    </g>
-</svg>
-<h3>矩形</h3>
-<svg width="600" height="300">
-    <rect id="A" x="30" y="30" fill="#ff6cc4" stroke="#c30d23" stroke-width="4" width="80" height="80" ></rect>
-    <rect id="B" x="140" y="30" fill="#ff6cc4" width="80" height="80" ></rect>
-    <rect id="C" x="30" y="140" fill="#6EA9FF" stroke="#c30d23" stroke-width="4" width="180" height="80" ></rect>
-    <rect id="D" x="30" y="140" fill="#6EA9FF" width="180" height="80" ></rect>
-    <rect id="E" x="240" y="140" fill="#ff6cc4" stroke="#6EA9FF" stroke-width="4" width="80" height="80" rx="10" ry="10" ></rect>
-</svg>
-<h3>圆形</h3>
-<svg width="600" height="300">
-    <circle id="oval" stroke="#1D36C6" stroke-width="6" fill="#BD10E0" cx="260" cy="150" r="80" ></circle>
-</svg>
-<h3>椭圆形</h3>
-<svg width="600" height="300">
-    <ellipse id="Oval" fill="#E54C4C" cx="80" cy="80" rx="55" ry="25" ></ellipse>
-    <ellipse fill="#77DD47" stroke="#246614" stroke-width="5" cx="250" cy="75" rx="67" ry="44" ></ellipse>
-    <ellipse fill="#890000" stroke="#246614" stroke-width="5" cx="250" cy="200" rx="50" ry="50" ></ellipse>
-</svg>
-<h3>多边形</h3>
-<svg>
-    <polygon fill="#D271FF" points="100,56 62,107 37,49" ></polygon>
-    <polygon fill="#68EADD" points="151,39 163,63 189,66 170,85 175,111 151,99 127,111 132,85 113,66 139,63 " ></polygon>
-    <polygon fill="#FF7900" points="219,110 206,70 240,46 274,70 261,110 " ></polygon>
-</svg>
-<h3>直线</h3>
-<svg height="300" width="300">
-    <line x1="20" y1="20" x2="200" y2="200" stroke="#ff3366" stroke-width="10"></line>
-</svg>
-<h3>折线</h3>
-<svg width="400" height="400">
-    <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" fill="white" stroke="#D07735" stroke-width="6" ></polyline>
-    <polyline points="200,40 240,40 240,80 280,80 280,120 320,120 320,160" fill="#F9F38C" stroke="#D07735" stroke-width="6" ></polyline>
-</svg>
+<div id="container">
+    <h1 class="text-center">基本形状</h1>
+    <ol>
+        <li>
+            <h2>通过制图软件绘制基本形状</h2>
+            <svg width="441px" height="542px" viewbox="0 0 441 542">
+                <defs>
+                    <rect id="path-1" x="24" y="102" width="223" height="61"></rect>
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M24.5,5.5 L242.5,5.5" id="Line" stroke="#979797" stroke-width="7" stroke-linecap="square"></path>
+                    <path d="M35.5,55.5 L231.5,55.5" id="Line-2" stroke="#F43F3F" stroke-width="8" stroke-linecap="square"></path>
+                    <path id="Line-2-decoration-1" d="M231.5,55.5 L220.7,52.5 L220.7,58.5 L231.5,55.5 Z" stroke="#F43F3F" stroke-width="8" stroke-linecap="square"></path>
+                    <g id="Rectangle">
+                        <use fill="#50E3C2" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#2B0B5D" stroke-width="2" x="25" y="103" width="221" height="59"></rect>
+                    </g>
+                    <ellipse id="Oval" fill="#E54C4C" cx="104" cy="230" rx="55" ry="25"></ellipse>
+                    <circle id="Oval-2" stroke="#1D36C6" stroke-width="6" fill="#BD10E0" cx="233.5" cy="229.5" r="41.5"></circle>
+                    <rect id="Rectangle-2" stroke="#979797" stroke-width="3" x="285.5" y="103.5" width="154" height="54" rx="8"></rect>
+                    <polygon id="Star" stroke="#979797" fill="#D8D8D8" points="54.5 359 36.5725498 369.506578 39.9963881 347.253289 25.4927763 331.493422 45.5362749 328.246711 54.5 308 63.4637251 328.246711 83.5072237 331.493422 69.0036119 347.253289 72.4274502 369.506578"></polygon>
+                    <polygon id="Polygon" stroke="#979797" fill="#D8D8D8" points="166.5 319 197.409337 341.456948 185.603021 377.793052 147.396979 377.793052 135.590663 341.456948"></polygon>
+                    <polygon id="Triangle" stroke="#979797" fill="#D8D8D8" points="281.5 319 310 372 253 372"></polygon>
+                    <path d="M7.36328125,456.507812 C21.8267071,446.910815 66.5037904,440.629565 141.394531,437.664062 L302.960938,475.503906 L282.238281,515.175781 L209.734375,538.65625 L222.191406,488.160156 L141.394531,498.050781 L72.9101563,527.65625 L65.2929688,488.160156 C12.2097513,476.655591 -7.10014455,466.10481 7.36328125,456.507812 Z" id="Path-2" stroke="#A13A3A" stroke-width="4"></path>
+                </g>
+            </svg>
+        </li>
+        <li>
+            <h2>SVG绘制基本形状</h2>
+            <ul>
+                <li>
+                    <h3>矩形:rect</h3>
+                    <svg width="600" height="300">
+                        <rect id="A" x="30" y="30" fill="#ff6cc4" stroke="#c30d23" stroke-width="4" width="80" height="80" ></rect>
+                        <rect id="B" x="140" y="30" fill="#ff6cc4" width="80" height="80" ></rect>
+                        <rect id="C" x="30" y="140" fill="#6EA9FF" stroke="#c30d23" stroke-width="4" width="180" height="80" ></rect>
+                        <rect id="D" x="30" y="140" fill="#6EA9FF" width="180" height="80" ></rect>
+                        <rect id="E" x="240" y="140" fill="#ff6cc4" stroke="#6EA9FF" stroke-width="4" width="80" height="80" rx="10" ry="10" ></rect>
+                    </svg>
+                </li>
+                <li>
+                    <h3>圆形:circle</h3>
+                    <svg width="600" height="300">
+                        <circle id="oval" stroke="#1D36C6" stroke-width="6" fill="#BD10E0" cx="260" cy="150" r="80" ></circle>
+                    </svg>
+                </li>
+                <li>
+                    <h3>椭圆形:ellipse</h3>
+                    <svg width="600" height="300">
+                        <ellipse id="Oval" fill="#E54C4C" cx="80" cy="80" rx="55" ry="25" ></ellipse>
+                        <ellipse fill="#77DD47" stroke="#246614" stroke-width="5" cx="250" cy="75" rx="67" ry="44" ></ellipse>
+                        <ellipse fill="#890000" stroke="#246614" stroke-width="5" cx="250" cy="200" rx="50" ry="50" ></ellipse>
+                    </svg>
+                </li>
+                <li>
+                    <h3>多边形:polygon</h3>
+                    <svg>
+                        <polygon fill="#D271FF" points="100,56 62,107 37,49" ></polygon>
+                        <polygon fill="#68EADD" points="151,39 163,63 189,66 170,85 175,111 151,99 127,111 132,85 113,66 139,63 " ></polygon>
+                        <polygon fill="#FF7900" points="219,110 206,70 240,46 274,70 261,110 " ></polygon>
+                    </svg>
+                </li>
+                <li>
+                    <h3>直线:line</h3>
+                    <svg height="300" width="300">
+                        <line x1="20" y1="20" x2="200" y2="200" stroke="#ff3366" stroke-width="10"></line>
+                    </svg>
+                </li>
+                <li>
+                    <h3>折线:polyline</h3>
+                    <svg width="400" height="200">
+                        <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" fill="white" stroke="#D07735" stroke-width="6" ></polyline>
+                        <polyline points="200,40 240,40 240,80 280,80 280,120 320,120 320,160" fill="#F9F38C" stroke="#D07735" stroke-width="6" ></polyline>
+                    </svg>
+                </li>
+                <li>
+                    <h3>路径:path</h3>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
 @@include('footer.html')

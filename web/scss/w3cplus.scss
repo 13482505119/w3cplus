@@ -32,6 +32,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
 }
+img {
+  max-width: 100%;
+}
+.text-center {
+  text-align: center;
+}
 
 //layout
 #container {
@@ -51,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 .swiper-slide {
-  text-align: center;
+  //text-align: center;
   font-size: pxToRem(36px);
   background: #fff;
   /* Center slide text vertically */
@@ -68,6 +74,9 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  ol {
+    width: 50%;
+  }
 }
 .swiper-pagination-bullet {
   width: pxToRem(16px);
