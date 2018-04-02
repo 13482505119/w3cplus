@@ -3,21 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <title>px to rem</title>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script>
-        $(function() {
-            $.get('dpr-user-login.css', function(data) {
-                data = data.replace(/(\d+)px/ig, function(rs, $1) {
-                    return parseInt($1) / 64 + 'rem';
-                });
-                $('pre').html(data);
-            });
-        });
-    </script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <style rel="stylesheet">
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+        .form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+        .form-group {
+            display: flex;
+            margin: 0.5em 0;
+        }
+        .form-input {
+            flex: 1;
+        }
+        label {
+            margin-right: 0.5em;
+        }
+        input {
+            width: 100%;
+        }
+        textarea {
+            display: block;
+            width: 100%;
+            resize: none;
+        }
+
+        .output {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-<pre>
+<div class="form">
+    <div class="form-group">
+        <label for="fs">HTML->STYLE->FontSize:</label>
+        <input type="text" id="fs" class="form-input" value="64">
+        <span>px</span>
+    </div>
+    <div class="form-group">
+        <label for="url">CSS文件</label>
+        <input type="text" class="form-input" id="url">
+    </div>
+    <div class="form-group">
+        <label for="text">CSS代码</label>
+        <div class="form-input">
+            <textarea rows="8" id="text"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="button" id="parse">转换</button>
+    </div>
+    <div class="form-group output">
+        <label for="output">CSS输出</label>
+        <textarea class="form-input" id="output"></textarea>
+    </div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function() {
+        var $output = $('#output'),
+                $url = $('#url'),
+                $text = $('#text'),
+                $fs = $('#fs');
 
-</pre>
+        $('#parse').click(function() {
+            var url = $url.val();
+            if (url) {
+                parseFile(url);
+            } else {
+                output($text.val());
+            }
+        });
+
+        //parse
+        function px2rem(css) {
+            return css.replace(/(\d+)px/ig, function(rs, $1) {
+                return parseInt($1) / parseInt($fs.val()) + 'rem';
+            });
+        }
+
+        function parseFile(url) {
+            $.get(url, function(css) {
+                output(css);
+            });
+        }
+
+        function output(css) {
+            //$output.html(px2rem(css));
+            $output.val(px2rem(css));
+        }
+
+    });
+</script>
 </body>
 </html>
